@@ -34,7 +34,7 @@ Port 8000 och 5432 är **inte** öppna mot internet.
 
 | # | Krav | Lösning |
 |---|------|---------|
-| 1 | EC2 free tier, Security Groups, Elastic IP, från scratch | t3.micro, SG 22/80, Elastic IP ([docs/GUIDE_RU.md](docs/GUIDE_RU.md) steg 1–2) |
+| 1 | EC2 free tier, Security Groups, Elastic IP, från scratch | t3.micro, SG 22/80, Elastic IP ([docs/GUIDE.md](docs/GUIDE.md) steg 1–2) |
 | 2 | SSH-nycklar för båda datorerna | AWS-nyckel för `ubuntu` + eget konto `studentb` med egen nyckel ([deploy/scripts/add_user.sh](deploy/scripts/add_user.sh)) |
 | 3 | Bash-skript: alias, paket, extra användare, SCP + körning | [deploy/scripts/setup.sh](deploy/scripts/setup.sh) |
 | 4 | Klona repot till en användares hemkatalog | `/home/fastapi_service/fastapi_app` |
@@ -62,9 +62,8 @@ deploy/
   scripts/backup.sh       pg_dump + loggar
   scripts/monitor_system.sh  övervakning + Discord
   scripts/smoke_test.sh   testar alla endpoints
-docs/GUIDE_RU.md          steg för steg (ryska), alla kommandon förklarade
-docs/REPETITION_RU.md     plan för repetition
-CHECKLIST.md  VIDEO_SCRIPT.md  TROUBLESHOOTING.md
+docs/GUIDE.md             steg för steg (engelska), alla kommandon
+TROUBLESHOOTING.md        vanliga fel och lösningar
 .env.example              exempel, inga riktiga hemligheter
 ```
 

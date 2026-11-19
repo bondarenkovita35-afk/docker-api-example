@@ -13,7 +13,7 @@
 #
 # OBS: Backuper på samma EC2 är inte optimalt. Om servern försvinner,
 # försvinner backuperna också. Kopiera dem därför också till din egen dator
-# med scp (se docs/GUIDE_RU.md) eller i produktion till t.ex. Amazon S3.
+# med scp (se docs/GUIDE.md) eller i produktion till t.ex. Amazon S3.
 #
 # Återställning:
 #   sudo cat <fil>.dump | sudo -u postgres pg_restore --clean --if-exists -d fastapi_movies_db
