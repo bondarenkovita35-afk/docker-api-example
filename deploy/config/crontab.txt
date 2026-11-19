@@ -1,0 +1,8 @@
+# Rader för root-crontab:   sudo crontab -e
+# Format: minut timme dag månad veckodag kommando   (serverns tid är UTC)
+
+# Backup av databas och loggar varje natt kl 02:00
+0 2 * * * /usr/local/bin/backup.sh >> /var/log/fastapi_backup.log 2>&1
+
+# Övervakning var 5:e minut
+*/5 * * * * /usr/local/bin/monitor_system.sh

@@ -12,7 +12,7 @@ PASSWORD = os.getenv("PASSWORD")
 def get_connection():
     return psycopg2.connect(
         dbname=DATABASE_NAME,
-        user="postgres",  # change if needed
+        user=os.getenv("DB_USER", "postgres"),  # egen databasanvändare i stället för postgres
         password=PASSWORD,
         host=os.getenv("DB_HOST", "localhost"),  # Use the DB_HOST variable
         port=os.getenv("DB_PORT", "5432"),  # Use the DB_PORT variable

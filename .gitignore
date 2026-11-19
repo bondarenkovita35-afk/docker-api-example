@@ -1,3 +1,28 @@
+# --- Hemligheter: får ALDRIG hamna i GitHub ---
 .env
-venv
-**pycache**
+*.env
+!.env.example
+*.pem
+*.ppk
+*.key
+id_rsa*
+id_ed25519*
+*.pub
+
+# --- Python ---
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# --- Backuper och loggar ---
+*.dump
+*.tar.gz
+*.log
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

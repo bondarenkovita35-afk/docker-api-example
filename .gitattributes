@@ -1,0 +1,4 @@
+# Alla textfiler får Linux-radslut (LF), även om repot klonas på Windows.
+# Annars kan Bash ge felet: $'\r': command not found
+* text=auto eol=lf
+*.pem binary
